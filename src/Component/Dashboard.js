@@ -4,7 +4,7 @@ import {useSelector,useState,useDispatch} from 'react-redux'
 
 const Dashboard = () => {
     const state = useSelector ((state => state.counter));
-    const {counter,profile} = useSelector((state)=> state)
+    const {profile} = useSelector((state)=> state)
     const [User, setUser] = useState(profile)
     const handleChange = (e)=>{
         const value = e.target.value

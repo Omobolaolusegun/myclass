@@ -6,12 +6,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import {BrokenLink} from '/component/404'
 // import Bndout from './Component/Bndout'
-// import ComponentInteraction from './ComponentInteraction';
-import Cbt from './Component/Cbt'
-// import HandlingInput from './Component/HandlingInput';
+import ComponentInteraction from './ComponentInteraction';
+import Cbt from './Component/Cbt';
+// import Edit from '/Routes/Edit'
+import HandlingInput from './Component/HandlingInput';
 // import Navbar from './Component/Navbar'
-import Fetch from './Component/Fetch';
-import NewPost from './Component/NewPost';
+// import Fetch from './Component/Fetch';
+// import NewPost from './Component/NewPost';
 import MainRouter from './Routes/MainRouter';
 import {Provider} from 'react-redux'
 // import DisplayPost from './Component/DisplayPost';
@@ -27,13 +28,14 @@ root.render(
     <Provider store={store}>
 
     <MainRouter/>
-    <Fetch/>
-    <NewPost/>
+    {/* <Fetch/> */}
+    {/* <NewPost/> */}
+    {/* <Edit/> */}
     </Provider>
-    {/* <ComponentInteraction/> */}
+    <ComponentInteraction/>
     {/* <State /> */}
     {/* <Details /> */}
-    {/* <HandlingInput/> */}
+    <HandlingInput/>
 
     {/* <Navbar/> */}
 

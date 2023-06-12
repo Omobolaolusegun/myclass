@@ -9,9 +9,9 @@ import Login from '../Component/Login'
 // import UserGuard from '../guards/UserGuard'
 // import Dashboard from "./Dashboard"
 // import NewPost from "../Component/NewPost"
-import Fetch from "../Component/Fetch"
+// import Fetch from "../Component/Fetch"
 import Navbar from "../Component/Navbar"
-import Details from '../Component/Details'
+// import Details from '../Component/Details'
 import State from "../Component/State"
 // import Counter from '../Component/Counter'
 // import {BrokenLink} from "../Component/404"
@@ -38,7 +38,7 @@ const MainRouter = () => {
                         {/* <Route path="*" element={<BrokenLink/>}/> */}
                         {/* {<Route path="/counter" element={<Counter/>}/>} */}
                         {/* <Route path="/login" element={<Login/>}/>  */}
-                        <Route path="/Fetch" element={<Fetch/>}/>
+                        {/* <Route path="/Fetch" element={<Fetch/>}/> */}
                         {/* <Route path='/Dashboard'element={<Dashboard/>}/>  */}
                         <Route path='/State'element={<State/>}/> 
                         {/* <Route path="user" element={<UserGuard/>}/> */}
@@ -47,7 +47,8 @@ const MainRouter = () => {
 
                         ]}/>  */}
                         <Route path="/login" element={<Login/>}/>
-                        <Route path="/Details" element={<Details/>}/>
+                        {/* <Route path="/Details" element={<Details/>}/> */}
+                        {/* <Route path="/Dashboard" element={<Dashboard/>}/> */}
                         {/* <Router path="/home" element={<home/>}/> */}
                     </Routes>
                 </Router>

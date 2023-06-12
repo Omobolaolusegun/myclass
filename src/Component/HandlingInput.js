@@ -41,6 +41,7 @@ const HandlingInput = () => {
             setindexToEdit(null)
             seteditedObj(userObject)
             localStorage.setItem("allUsers", JSON.stringify(allUsers))
+            window.localStorage.href="Counter.js"
         }
         // const userObj = {...user}
         // console.log(userObj)
@@ -77,6 +78,9 @@ const HandlingInput = () => {
 //    }
 
     const editItem= (i, e)=> {
+        var answer = prompt("what is your name?");
+                        alert("your firstname is " + answer);
+                        setindexToEdit.push(i)
         setindexToEdit(i)
         var mee = allUsers[i]
         seteditedObj(mee)
@@ -103,12 +107,13 @@ const HandlingInput = () => {
             <input name="school" placeholder="school" value={indexToEdit == null? user.school: editedObj.school} onChange={inputIsChange} className="border rounded m-2 p-2 outline none"/>
             <input type="date" name="date" value={indexToEdit == null? user.date: editedObj.date} onChange={inputIsChange} className="border rounded m-2 p-2 outline none"/>
             <button onClick={submitUser}className="btn btn-primary w-100 mt-3">{indexToEdit === null? "Sign up": "Update"}</button>
+           
             </div>
 
         </div>
         {
             allUsers.map((each, i)=>(
-             <div key={i} className={`bg-light border border-green border-3 col-lg-6 m-auto mt-3 shadow rounded text-center fw-bold fs-2`}>{each.firstname} {each.lastname} {each.dept}  {each.school} {each.date} {each.age}
+             <div key={i} className={`bg-primary border border-green border-3 col-lg-6 m-auto mt-3 shadow rounded text-center fw-bold fs-2`}>{each.firstname} {each.lastname} {each.dept}  {each.school} {each.date} {each.age}
              <Esther clearMe={clearMe} i ={i} editItem={editItem}/>
              
             
@@ -139,8 +144,8 @@ const HandlingInput = () => {
 
 const Esther = ({clearMe,editItem}, {i})=>{
     return(<div>
-    <button className="btn-btn warning m-auto" onClick={()=>clearMe(i)}>Delete</button>
-   <button className="btn btn-success m-auto" onClick={()=>editItem(i)}>Edit</button><br/><br/>
+    <button className="bg-danger text-light m-auto shadow-sm p-1" onClick={()=>clearMe(i)}>Delete</button>
+   <button className="btn btn-success m-auto p-3" onClick={()=>editItem(i)}>Edit</button><br/><br/>
     </div>
     )
 }

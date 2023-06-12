@@ -4,6 +4,7 @@ import {useNavigate} from 'react-router'
 import {setProfile} from '../Slice/userSlice'
 
 const Edit = () => {
+    // const [page, setpage] = useState({firstname="", lastname=""})
     let {profile} = useSelector(state=>state)
     const [User, setUser] = useState(profile)
 
